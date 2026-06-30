@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-25T17:22:51.782Z",
+    "end": "2026-06-25T17:22:54.573Z",
+    "duration": 2791,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "df2d8349-6d9d-45f9-9314-e582613a4e8b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\booking\\bookingCRUD.cy.js",
+      "file": "cypress\\e2e\\booking\\bookingCRUD.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "20e15b39-646c-47b7-ab87-18309aca2568",
+          "title": "Booking CRUD",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Booking",
+              "fullTitle": "Booking CRUD Get Booking",
+              "timedOut": null,
+              "duration": 2511,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: `/booking/${bookingId}`\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.firstname).to.exist;\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://restful-booker.herokuapp.com/booking\n\nThe response we received from your web server was:\n\n  > 500: Internal Server Error\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://restful-booker.herokuapp.com/booking\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/15.17.0 Chrome/138.0.7204.251 Electron/37.6.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 169\n}\nBody: {\"firstname\":\"John\",\"lastname\":\"Doe\",\"totalpricce\":500,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2025-08-09\",\"checkout\":\"20225-09-01\"},\"additionalneeds\":\"brealfast\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 500 - Internal Server Error\nHeaders: {\n  \"content-length\": \"21\",\n  \"content-type\": \"text/plain; charset=utf-8\",\n  \"date\": \"Thu, 25 Jun 2026 17:22:56 GMT\",\n  \"etag\": \"W/\\\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\\\"\",\n  \"nel\": \"{\\\"report_to\\\":\\\"heroku-nel\\\",\\\"response_headers\\\":[\\\"Via\\\"],\\\"max_age\\\":3600,\\\"success_fraction\\\":0.01,\\\"failure_fraction\\\":0.1}\",\n  \"report-to\": \"{\\\"group\\\":\\\"heroku-nel\\\",\\\"endpoints\\\":[{\\\"url\\\":\\\"https://nel.heroku.com/reports?s=pfCcKfmxf0in1dEPQWcaUF3wd0VlcqvD%2FJ1dIGZTA%2Fc%3D\\\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\\\u0026ts=1782408176\\\"}],\\\"max_age\\\":3600}\",\n  \"reporting-endpoints\": \"heroku-nel=\\\"https://nel.heroku.com/reports?s=pfCcKfmxf0in1dEPQWcaUF3wd0VlcqvD%2FJ1dIGZTA%2Fc%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1782408176\\\"\",\n  \"server\": \"Heroku\",\n  \"via\": \"1.1 heroku-router\",\n  \"x-powered-by\": \"Express\"\n}\nBody: Internal Server Error\n\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Booking CRUD`",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://restful-booker.herokuapp.com/booking\n\nThe response we received from your web server was:\n\n  > 500: Internal Server Error\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://restful-booker.herokuapp.com/booking\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/15.17.0 Chrome/138.0.7204.251 Electron/37.6.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 169\n}\nBody: {\"firstname\":\"John\",\"lastname\":\"Doe\",\"totalpricce\":500,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2025-08-09\",\"checkout\":\"20225-09-01\"},\"additionalneeds\":\"brealfast\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 500 - Internal Server Error\nHeaders: {\n  \"content-length\": \"21\",\n  \"content-type\": \"text/plain; charset=utf-8\",\n  \"date\": \"Thu, 25 Jun 2026 17:22:56 GMT\",\n  \"etag\": \"W/\\\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\\\"\",\n  \"nel\": \"{\\\"report_to\\\":\\\"heroku-nel\\\",\\\"response_headers\\\":[\\\"Via\\\"],\\\"max_age\\\":3600,\\\"success_fraction\\\":0.01,\\\"failure_fraction\\\":0.1}\",\n  \"report-to\": \"{\\\"group\\\":\\\"heroku-nel\\\",\\\"endpoints\\\":[{\\\"url\\\":\\\"https://nel.heroku.com/reports?s=pfCcKfmxf0in1dEPQWcaUF3wd0VlcqvD%2FJ1dIGZTA%2Fc%3D\\\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\\\u0026ts=1782408176\\\"}],\\\"max_age\\\":3600}\",\n  \"reporting-endpoints\": \"heroku-nel=\\\"https://nel.heroku.com/reports?s=pfCcKfmxf0in1dEPQWcaUF3wd0VlcqvD%2FJ1dIGZTA%2Fc%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1782408176\\\"\",\n  \"server\": \"Heroku\",\n  \"via\": \"1.1 heroku-router\",\n  \"x-powered-by\": \"Express\"\n}\nBody: Internal Server Error\n\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Booking CRUD`\n    at <unknown> (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:136705:72)\n    at tryCatcher (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:1671:18)\n    at _drainQueueStep (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://restful-booker-api/./cypress/e2e/booking/bookingCRUD.cy.js:8:6)\n    at getRet (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:123004:20)\n    at tryCatcher (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:123015:66)\n    at Context.then (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:123266:21)\n    at wrapped (https://restful-booker.herokuapp.com/__cypress/runner/cypress_runner.js:146625:19)",
+                "diff": null
+              },
+              "uuid": "bac7aa8f-aaed-4b45-bc08-a6ebe92d37da",
+              "parentUUID": "20e15b39-646c-47b7-ab87-18309aca2568",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update Booking",
+              "fullTitle": "Booking CRUD Update Booking",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"bookingData\").then(bookingData => {\n  bookingData.firstname = \"Updated\";\n  cy.request({\n    method: \"PUT\",\n    url: `/booking/${bookingId}`,\n    headers: {\n      Cookie: `token=${token}`\n    },\n    body: bookingData\n  }).then(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.firstname).to.eq(\"Updated\");\n  });\n});",
+              "err": {},
+              "uuid": "b3dbdccc-14fd-4184-b26a-c5aeccf14d5d",
+              "parentUUID": "20e15b39-646c-47b7-ab87-18309aca2568",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Booking",
+              "fullTitle": "Booking CRUD Delete Booking",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"DELETE\",\n  url: `/booking/${bookingId}`,\n  headers: {\n    Cookie: `token=${token}`\n  }\n}).then(response => {\n  expect(response.status).to.eq(201);\n});",
+              "err": {},
+              "uuid": "181fafac-4ab7-43ff-b700-81485d979008",
+              "parentUUID": "20e15b39-646c-47b7-ab87-18309aca2568",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bac7aa8f-aaed-4b45-bc08-a6ebe92d37da"
+          ],
+          "pending": [],
+          "skipped": [
+            "b3dbdccc-14fd-4184-b26a-c5aeccf14d5d",
+            "181fafac-4ab7-43ff-b700-81485d979008"
+          ],
+          "duration": 2511,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
