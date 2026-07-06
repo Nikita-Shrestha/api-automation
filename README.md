@@ -2,108 +2,107 @@
 
 ## Overview
 
-This project is an API automation framework built using **Cypress** to test the **RESTful Booker API**. It demonstrates end-to-end API testing by automating authentication, booking management, CRUD operations, response validation, JSON schema validation, and negative test scenarios.
+This project is an API automation framework built with **Cypress** to test the RESTful Booker API. The framework automates authentication, booking management, CRUD operations, response validation, schema validation, and negative test scenarios.
 
-The framework follows a clean and reusable structure, making it easy to maintain and extend.
-
----
-
-## Tech Stack
-
-* Cypress
-* JavaScript
-* Node.js
-* REST API
-* JSON
+The project follows a reusable framework structure using custom commands, fixtures, and helper files.
 
 ---
 
-## Features
+## Technologies Used
 
-* Authentication token generation
-* Booking creation
-* Retrieve booking by ID
-* Retrieve all booking IDs
-* Update booking
-* Partial update booking
-* Delete booking
-* Status code validation
-* Response body validation
-* Response time validation
-* JSON schema validation
-* Negative API testing
+- Cypress
+- JavaScript
+- Node.js
+- REST API
+- JSON
 
 ---
 
 ## Project Structure
 
-```text
-cypress/
-├── e2e/
-│   ├── auth/
-│   ├── booking/
-│   └── bookingCRUD/
-├── fixtures/
-├── support/
-└── schemas/
-
-cypress.config.js
-package.json
-README.md
+```
+RESTFUL-BOOKER-API
+│
+├── cypress
+│   ├── e2e
+│   │   └── booking
+│   │       ├── auth.cy.js
+│   │       ├── booking.cy.js
+│   │       ├── bookingCRUD.cy.js
+│   │       ├── headers.cy.js
+│   │       ├── negative.cy.js
+│   │       └── schemaValidation.cy.js
+│   │
+│   ├── fixtures
+│   │   ├── schemas
+│   │   │   ├── authSchema.json
+│   │   │   └── bookingSchema.json
+│   │   ├── bookingData.json
+│   │   └── example.json
+│   │
+│   ├── support
+│   │   ├── apiHelper.js
+│   │   ├── commands.js
+│   │   └── e2e.js
+│   │
+│   ├── reports
+│   └── screenshots
+│
+├── cypress.config.js
+├── package.json
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## Test Scenarios
+## Automated Test Scenarios
 
 ### Authentication
-
-* Generate Auth Token
-* Invalid Authentication
+- Generate Authentication Token
+- Invalid Authentication
 
 ### Booking
-
-* Create Booking
-* Get Booking by ID
-* Get All Booking IDs
+- Create Booking
+- Get Booking by ID
+- Get All Booking IDs
 
 ### Booking CRUD
+- Update Booking
+- Partial Update Booking
+- Delete Booking
 
-* Update Booking
-* Partial Update Booking
-* Delete Booking
+### Header Validation
+- Verify Response Headers
+- Verify Content-Type
+- Verify Server Response
 
-### Validation
+### Response Validation
+- Status Code Validation
+- Response Body Validation
+- Response Time Validation
 
-* Status Code Validation
-* Response Validation
-* Response Time Validation
-* JSON Schema Validation
+### JSON Schema Validation
+- Authentication Schema Validation
+- Booking Schema Validation
 
-### Negative Testing
-
-* Invalid Credentials
-* Invalid Booking ID
-* Missing Required Fields
-* Unauthorized Requests
+### Negative Test Scenarios
+- Invalid Credentials
+- Invalid Booking ID
+- Missing Required Fields
+- Unauthorized Access
 
 ---
 
 ## Installation
 
-Clone the repository:
+Clone the repository
 
 ```bash
-git clone https://github.com/Nikita-Shrestha/restful-booker-api.git
+git clone https://github.com/Nikita-Shrestha/api-automation.git
 ```
 
-Navigate to the project directory:
-
-```bash
-cd restful-booker-api
-```
-
-Install dependencies:
+Install dependencies
 
 ```bash
 npm install
@@ -113,41 +112,42 @@ npm install
 
 ## Running the Tests
 
-Run all tests:
-
-```bash
-npx cypress run
-```
-
-Open the Cypress Test Runner:
+Open Cypress Test Runner
 
 ```bash
 npx cypress open
+```
+
+Run all tests in headless mode
+
+```bash
+npx cypress run
 ```
 
 ---
 
 ## Skills Demonstrated
 
-* API Automation Testing
-* REST API Testing
-* Cypress Framework Development
-* CRUD API Testing
-* Authentication Testing
-* Assertions and Validations
-* JSON Schema Validation
-* Test Data Management
-* Negative Testing
+- API Automation Testing
+- Cypress Framework Development
+- REST API Testing
+- CRUD API Testing
+- JSON Schema Validation
+- Response Validation
+- Header Validation
+- Negative Testing
+- Custom Cypress Commands
+- Reusable Test Data using Fixtures
 
 ---
 
-## Future Enhancements
+## Future Improvements
 
-* GitHub Actions CI/CD integration
-* HTML reporting
-* Data-driven testing
-* Environment configuration
-* Docker support
+- CI/CD using GitHub Actions
+- HTML Test Reports
+- Environment Configuration
+- Data-Driven Testing
+- API Test Coverage Expansion
 
 ---
 
@@ -156,5 +156,3 @@ npx cypress open
 **Nikita Shrestha**
 
 QA Engineer | Manual & Automation Testing
-
-GitHub: https://github.com/Nikita-Shrestha
